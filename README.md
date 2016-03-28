@@ -44,6 +44,68 @@ Design Assets
 We are looking to build a UI that is very clean for quick reading. We have selected Bootstrap to style our pages. Additionally, we may use unsplash.com as a resource for royalty-free stock imagery.
 
 
-Pseudocode
+User Stories
 -------------
-this will do that
+
+High Priority: (required project scope)
+
+- I need to be to able to register and log in.
+- I need to be able fill in my personal emergency information.
+- I need to see all the information that I input.
+- I need to be able to change/update the information that I input.
+
+Medium Priority:
+- I want to upload a picture of myself as a profile avatar.
+- I want to be able to allow other users to view my information.
+- I want to be able to use this on different devices.
+
+Low Priority
+- I want to be able to change my background.
+
+
+Pseudocode
+-----------
+1. Load all necessary gems in Gemfile
+  - Don't forget BCrypt!
+2. Bundle
+3. config.ru: Require 'sinatra/base'
+4. config.ru: Require all Controllers & Models
+5. config.ru: Map set routes to controllers
+6. Set up views
+  - Code out form
+  - Link to boostrap and scripts within layout.erb
+  - Set up ERB locations & metadata where they apply
+7. Set up public directory, insert media like background image(s)
+  - add any assets for 404 error page
+8. Set up Models
+  - create classes where they apply, inherit methods through ActiveRecord::Base
+9. Create database through preferred method (sqlite, migrations.sql, etc.)
+10. Controllers: Application Controller: Establish db connection, set file paths, and not_found erb.
+  - enable sessions
+11. Controllers: Account Controller: set up CRUD routes
+12. Controllers & Views: We may need a few different erb's containing forms to change out different tables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------
