@@ -21,7 +21,7 @@ This project must be a **full-stack** application.
 
 
 **How Requirements Were Met**
- - nothing yet.
+ - nothing yet...
 
 
 The App
