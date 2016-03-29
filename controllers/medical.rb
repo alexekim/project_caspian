@@ -1,6 +1,6 @@
 class MedicalController < ApplicationController
   get '/' do
-      erb :medical_form
+      erb :medical_form, locals: {title: 'Medical Information'}
   end
 
   post '/create' do

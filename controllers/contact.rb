@@ -1,10 +1,8 @@
 class ContactController < ApplicationController
 
   get '/' do
-    erb :contact_form
+    erb :contact_form, locals: {title: 'Contact Information'}
   end
-
-
 
   post '/create' do
   @contact_create = Contact.create({

@@ -1,3 +1,3 @@
-class Location < ActiveRecord::Base
+class CampLocation < ActiveRecord::Base
 
 end

@@ -1,6 +1,7 @@
 class PersonalController < ApplicationController
   get '/' do
-      erb :personal_form
+
+      erb :personal_form, locals: {title: 'Personal Information'}
   end
 
   post '/create' do
