@@ -18,7 +18,7 @@ class MedicalController < ApplicationController
   end
 
   get '/update' do
-    erb :personal_update
+    erb :personal_update, locals: {title: 'Update Medical Information'}
   end
 
 

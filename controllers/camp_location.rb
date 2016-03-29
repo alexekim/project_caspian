@@ -19,7 +19,7 @@ class LocationController < ApplicationController
     end
 
   get '/update' do
-    erb :camp_location_update
+    erb :camp_location_update, locals: {title: 'Update Camp & Vehicle Location'}
   end
 
 end
