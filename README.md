@@ -32,7 +32,7 @@ This can be classified as an Emergency Management app. It is meant to present im
 
 ERD
 ---------
-![ERD](http://s8.postimg.org/ljxlti06d/Screen_Shot_2016_03_28_at_2_54_32_PM.png)
+![ERD](http://s10.postimg.org/mbtu3r7a1/caspian_erd.jpg)
 
 Wireframe
 --------
