@@ -1,10 +1,10 @@
 class LocationController < ApplicationController
 
-  get '/'
+  get '/' do
       erb :camp_location_form
   end
 
-  post '/create'
+  post '/create' do
     @camp_location_create = Location.create({
       :park_name     => params[:park_name],
       :site_number   => params[:site_number],
@@ -18,7 +18,7 @@ class LocationController < ApplicationController
     redirect '/camp_location'
   end
 
-  get '/update'
+  get '/update' do
     erb :camp_location_update
   end
 

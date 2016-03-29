@@ -1,9 +1,9 @@
 class PersonalController < ApplicationController
-  get '/'
+  get '/' do
       erb :personal_form
   end
 
-  post '/create'
+  post '/create' do
     @personal_create = Personal.create({
       :name       => params[:name],
       :birthdate  => params[:birthdate],
@@ -16,7 +16,7 @@ class PersonalController < ApplicationController
     redirect '/medical'
   end
 
-  get '/update'
+  get '/update' do
     erb :personal_update
   end
 

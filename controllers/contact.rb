@@ -1,12 +1,12 @@
 class ContactController < ApplicationController
 
-  get '/'
+  get '/' do
     erb :contact_form
   end
 
 
 
-  post '/create'
+  post '/create' do
   @contact_create = Contact.create({
     :phone          => params[:phone],
     :address        => params[:address],
@@ -22,7 +22,7 @@ class ContactController < ApplicationController
   redirect '/medical'
   end
 
-  get '/update'
+  get '/update' do
     erb :contact_update
   end
 
