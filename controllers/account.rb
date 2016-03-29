@@ -5,7 +5,6 @@ class AccountController < ApplicationController
   end
 
   post '/register'
-    "do something"
     redirect '/personal'
   end
 
