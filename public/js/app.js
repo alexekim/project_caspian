@@ -1,4 +1,8 @@
 // PROFILE
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09254495d9a8874e6134ce8f8b216a2a8fbc011a
 $(document).ready(function() {
     var panels = $('.user-infos');
     var panelsButton = $('.dropdown-user');

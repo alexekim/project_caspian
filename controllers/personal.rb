@@ -1,9 +1,10 @@
 class PersonalController < ApplicationController
-  get '/'
-      erb :personal_form
+  get '/' do
+
+      erb :personal_form, locals: {title: 'Personal Information'}
   end
 
-  post '/create'
+  post '/create' do
     @personal_create = Personal.create({
       :name       => params[:name],
       :birthdate  => params[:birthdate],
@@ -16,7 +17,7 @@ class PersonalController < ApplicationController
     redirect '/medical'
   end
 
-  get '/update'
+  get '/update' do
     erb :personal_update
   end
 

@@ -1,9 +1,9 @@
 class MedicalController < ApplicationController
-  get '/'
-      erb :medical_form
+  get '/' do
+      erb :medical_form, locals: {title: 'Medical Information'}
   end
 
-  post '/create'
+  post '/create' do
     @medical_create = Medical.create({
       :allergies             => params[:allergies],
       :diseases              => params[:diseases],
@@ -17,7 +17,7 @@ class MedicalController < ApplicationController
     redirect '/camp_location'
   end
 
-  get '/update'
+  get '/update' do
     erb :personal_update
   end
 

@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   end
 
   not_found do
-    erb :notfound
+    erb :notfound, locals: {title: '404 Not Found'}
   end
 
   # global app variables
