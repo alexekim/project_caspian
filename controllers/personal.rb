@@ -5,11 +5,11 @@ class PersonalController < ApplicationController
 
   post '/create'
     @personal_create = Personal.create({
-      :name       => params[:name]
-      :birthdate  => params[:birthdate]
-      :gender     => params[:gender]
-      :height     => params[:height]
-      :weight     => params[:weight]
+      :name       => params[:name],
+      :birthdate  => params[:birthdate],
+      :gender     => params[:gender],
+      :height     => params[:height],
+      :weight     => params[:weight],
       :blood_type => params[:blood_type]
       })
       @personal_create.save

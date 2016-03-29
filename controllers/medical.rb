@@ -5,12 +5,12 @@ class MedicalController < ApplicationController
 
   post '/create'
     @medical_create = Medical.create({
-      :allergies             => params[:allergies]
-      :diseases              => params[:diseases]
-      :medication_dosage     => params[:medication_dosage]
-      :smoking               => params[:smoking]
-      :alcohol               => params[:alcohol]
-      :implants              => params[:implants]
+      :allergies             => params[:allergies],
+      :diseases              => params[:diseases],
+      :medication_dosage     => params[:medication_dosage],
+      :smoking               => params[:smoking],
+      :alcohol               => params[:alcohol],
+      :implants              => params[:implants],
       :organ_donor           => params[:organ_donor]
       })
       @medical_create.save

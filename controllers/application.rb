@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
 
   ActiveRecord::Base.establish_connection(
     :adapter => 'postgresql',
-    :database => 'camprice'
+    :database => 'caspian'
     )
 
 
