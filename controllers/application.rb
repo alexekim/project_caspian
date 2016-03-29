@@ -25,4 +25,7 @@ class ApplicationController < Sinatra::Base
     erb :notfound
   end
 
+  # global app variables
+  @is_user_logged_in = false
+
 end
