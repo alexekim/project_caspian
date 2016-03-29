@@ -1,7 +1,7 @@
 
 Project Two: Camping Emergency Info
 ===================
-**Contributors: ** Alex Kim, Maxwell Stern
+**Contributors:** Alex Kim, Maxwell Stern
 
 
 **Sinatra and Ruby** are the core technologies used in this project. HTML, CSS, and JavaScript will be implemented in styling the pages.
