@@ -8,11 +8,18 @@ class ApplicationController < Sinatra::Base
     :database => 'camprice'
     )
 
+
+  # enable session support for our application  
+  enable :sessions
   # allow static files to be put in /public and hosted at localhost/*
   set :public_folder, File.expand_path('../../public', __FILE__)
   # set folder for templates to ../views, but make the path absolute
   set :views, File.expand_path('../../views', __FILE__)
 
+
+  get '/' do
+    erb :homepage, locals: {title: 'Home Page Title Tag'}
+  end
 
   not_found do
     erb :notfound
