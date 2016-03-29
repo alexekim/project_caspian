@@ -13,8 +13,8 @@ require './models/personal'
 require './models/medical'
 
 map('/') {run ApplicationController}
-map('') {run AccountController}
-map('') {run LocationController}
-map('') {run ContactController}
-map('') {run PersonalController}
-map('') {run MedicalController}
+map('/account') {run AccountController}
+map('/location') {run LocationController}
+map('/contact') {run ContactController}
+map('/personal') {run PersonalController}
+map('/medical') {run MedicalController}
