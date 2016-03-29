@@ -21,7 +21,7 @@ class ContactController < ApplicationController
   end
 
   get '/update' do
-    erb :contact_update
+    erb :contact_update, locals: {title: 'Update Contact Information'}
   end
 
 
