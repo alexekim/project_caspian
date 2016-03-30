@@ -8,11 +8,11 @@
 
       <h2 class="white">Register</h2>
       <form class="form-group" action="/account/register" method="post">
-        <input class="form-control" type="email" name="email" placeholder="Enter Email" >
+        <input class="form-control" type="email" name="email" placeholder="Enter Email" required>
         <br />
-        <input class="form-control" type="password" name="password" placeholder="Choose Password">
+        <input class="form-control" type="password" name="password" placeholder="Choose Password" required>
         <br />
-        <input class="form-control" type="password" name="password" placeholder="Confirm Password">
+        <!-- <input class="form-control" type="password" name="password" placeholder="Confirm Password" required> -->
         <br />
         <button class="btn btn-primary" type="submit">Register</button>
       </form>
@@ -21,9 +21,9 @@
     <div class="col-md-6">
       <h2 class="white">Login</h2>
       <form class="form-group" action="/account/login" method="post">
-        <input class="form-control" type="email" name="email" placeholder="Enter Email" >
+        <input class="form-control" type="email" name="email" placeholder="Enter Email" required>
         <br />
-        <input class="form-control" type="password" name="password" placeholder="Enter Password">
+        <input class="form-control" type="password" name="password" placeholder="Enter Password" required>
         <br />
         <button class="btn btn-primary" type="submit">Login</button>
       </form>
