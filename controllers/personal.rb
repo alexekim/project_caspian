@@ -21,5 +21,8 @@ class PersonalController < ApplicationController
     erb :personal_update, locals: {title: 'Update Personal Information'}
   end
 
-
+  # get '/view'
+  #   @personal_all = Personal.all
+  #   erb :profile
+  # end
 end

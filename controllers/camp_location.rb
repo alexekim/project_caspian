@@ -16,6 +16,7 @@ class LocationController < ApplicationController
       })
       @camp_create.save
       redirect '/profile'
+      # redirect '/personal/view'
     end
 
   get '/update' do
