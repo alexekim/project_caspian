@@ -1,6 +1,6 @@
 class Account < ActiveRecord::Base
-  has_many :personals
-  has_many :medicals
-  has_many :contacts
-  has_many :camp_locations
+  has_one :personal
+  has_one :medical
+  has_one :contact
+  has_one :camp_location
 end
