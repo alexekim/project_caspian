@@ -1,18 +1,19 @@
 require 'sinatra/base'
 
 require './controllers/application'
+
 require './controllers/account'
-require './controllers/camp_location'
+require './controllers/personal'
 require './controllers/contact'
 require './controllers/medical'
-require './controllers/personal'
+require './controllers/camp_location'
 require './controllers/profile'
 
 require './models/account'
-require './models/camp_location'
 require './models/personal'
-require './models/medical'
 require './models/contact'
+require './models/medical'
+require './models/camp_location'
 
 map('/') {run ApplicationController}
 map('/account') {run AccountController}

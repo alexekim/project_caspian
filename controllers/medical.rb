@@ -18,7 +18,6 @@ class MedicalController < ApplicationController
       :implants              => params[:implants],
       :organ_donor           => params[:organ_donor]
       })
-      @medical_create.save
     redirect '/camp_location'
   end
 

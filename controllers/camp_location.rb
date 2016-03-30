@@ -18,7 +18,6 @@ class LocationController < ApplicationController
       :vehicle_color => params[:vehicle_color],
       :vehicle_plate => params[:vehicle_plate]
       })
-      @camp_create.save
       redirect '/profile'
       # redirect '/personal/view'
     end
