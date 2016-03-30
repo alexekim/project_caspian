@@ -1,5 +1,4 @@
 class AccountController < ApplicationController
-
   get '/' do
     erb :index
   end
