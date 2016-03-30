@@ -36,7 +36,7 @@ class AccountController < ApplicationController
     # redirect '/profile'
     # 2. Find user by email
     @account = Account.find_by(:email => params[:email])
-    puts @account.personal
+    # puts @account.personal
     # 3. Set user to @instance variable
     # 4. Set session info
     if @account
