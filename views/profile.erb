@@ -1,9 +1,9 @@
 <div class="container">
       <div class="row">
       <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-           <A href="edit.html" >Edit Profile</A>
+           <a href="edit.html">Edit Profile</a>
 
-        <A href="edit.html" >Logout</A>
+        <a href="edit.html" >Logout</a>
        <br>
 <p class=" text-info">May 05,2014,03:00 pm </p>
       </div>
@@ -11,7 +11,7 @@
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><%= @account.personal.gender %> GOES HERE</h3>
+              <h3 class="panel-title"><%= @account.personal.name %></h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -20,15 +20,15 @@
                   <dl>
                     <h3>---------PERSONAL INFO---------</h3>
                     <dt>BIRTHDATE:</dt>
-                      <dd>birthdate GOES HERE</dd>
+                      <dd><%= @account.personal.birthdate %></dd>
                     <dt>GENDER</dt>
-                       <dd>gender GOES HERE</dd>
+                       <dd><%= @account.personal.gender %></dd>
                     <dt>HEIGHT</dt>
-                      <dd>height GOES HERE</dd>
+                      <dd><%= @account.personal.height %></dd>
                     <dt>WEIGHT</dt>
-                      <dd>weight GOES HERE</dd>
+                      <dd><%= @account.personal.weight %></dd>
                     <dt>BLOOD TYPE</dt>
-                      <dd>blood_type GOES HERE</dd>
+                      <dd><%= @account.personal.blood_type %></dd>
                   </dl>
                 </div>
                 <div class=" col-md-9 col-lg-9 ">
@@ -37,78 +37,78 @@
                       <h3>---------CONTACT INFO---------</h3>
                       <tr>
                         <td>PHONE</td>
-                        <td>phone GOES HERE</td>
+                        <td><%= @account.contact.phone %></td>
                      </tr>
                       <tr>
                         <td>IN CASE OF EMERGENCY CONTACT</td>
-                        <td>ice_name GOES HERE</td>
+                        <td><%= @account.contact.ice_name %></td>
                       </tr>
                       <tr>
                         <td>IN CASE OF EMERGENCY RELATION</td>
-                        <td>ice_relation GOES HERE</td>
+                        <td><%= @account.contact.ice_relation %></td>
                       </tr>
                       <tr>
                         <td>IN CASE OF EMERGENCY PHONE</td>
-                        <td>ice_phone GOES HERE</td>
+                        <td><%= @account.contact.ice_phone %></td>
                       </tr>
 
                       <h3>---------MEDICAL INFO---------</h3>
                       <tr>
                         <td>ALLERGIES</td>
-                        <td>allergies GOES HERE</td>
+                        <td><%= @account.medical.allergies %></td>
                      </tr>
                       <tr>
                         <td>DISEASES</td>
-                        <td>diseases GOES HERE</td>
+                        <td><%= @account.medical.diseases %></td>
                       </tr>
                       <tr>
                         <td>MEDICATION & DOSAGE</td>
-                        <td>medication_dosage GOES HERE</td>
+                        <td><%= @account.medical.medication_dosage %></td>
                       </tr>
                       <tr>
                         <td>SMOKING</td>
-                        <td>smoking GOES HERE</td>
+                        <td><%= @account.medical.smoking %></td>
                       </tr>
                       <tr>
                         <td>ALCOHOL</td>
-                        <td>alcohol GOES HERE</td>
+                        <td><%= @account.medical.alcohol %></td>
                       </tr>
                       <tr>
                         <td>IMPLANTS OR PROSTHESIS</td>
-                        <td>implants GOES HERE</td>
+                        <td><%= @account.medical.implants %></td>
                       </tr>
                       <tr>
                         <td>ORGAN DONOR</td>
-                        <td>organ_donor GOES HERE</td>
+                        <td><%= @account.medical.organ_donor %></td>
                       </tr>
                       <h3>---------CAMP & VEHICLE LOCATION---------</h3>
                       <tr>
                         <td>PARK NAME</td>
-                        <td>park_name GOES HERE</td>
+                        <td><%= @account.camp_location.park_name %></td>
                      </tr>
                       <tr>
                         <td>CAMPSITE NUMBER</td>
-                        <td>site_number GOES HERE</td>
+                        <td><%= @account.camp_location.site_number %></td>
                       </tr>
                       <tr>
                         <td>VEHICLE MAKE</td>
-                        <td>vehicle_make GOES HERE</td>
+                        <td><%= @account.camp_location.vehicle_make %></td>
                       </tr>
                       <tr>
                         <td>VEHICLE MODEL</td>
-                        <td>vehicle_model GOES HERE</td>
+                        <td><%= @account.camp_location.vehicle_model %>/td>
                       </tr>
                       <tr>
                         <td>VEHICLE YEAR</td>
-                        <td>vehicle_year GOES HERE</td>
+                        <td><%= @account.camp_location.vehicle_year %></td>
                       </tr>
                       <tr>
                         <td>VEHICLE COLOR</td>
-                        <td>vehicle_color GOES HERE</td>
+                        <td><%= @account.camp_location.vehicle_color %></td>
                       </tr>
                       <tr>
                         <td>VEHICLE PLATE</td>
-                        <td>vehicle_plate GOES HERE</td>
+                        <td><%= @account.camp_location.vehicle_plate %></td>
                       </tr>
 
                     </tr>
