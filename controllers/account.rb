@@ -25,7 +25,7 @@ class AccountController < ApplicationController
 
     if @account_create
       session[:logged_in] = true
-      session[:email]  = params[:email]
+      session[:email]     = params[:email]
       session[:user_id]   = @account_create.id
       redirect '/personal'
     else
