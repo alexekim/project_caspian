@@ -36,13 +36,14 @@ class AccountController < ApplicationController
   post '/login' do
     # redirect '/profile'
     # 2. Find user by email
-    @personal_info = Account.find_by(:email => params[:email])
+    @account = Account.find_by(:email => params[:email])
+    puts @account.personals
     # 3. Set user to @instance variable
     # 4. Set session info
-    if @personal_info
+    if @account
       session[:logged_in] = true
-      session[:user_id] = @personal_info.id
-      erb :profile, locals: {title: 'Profile'}
+      session[:user_id] = @account.id
+      redirect '/profile'
     else
       status 403
       "error, logging in."

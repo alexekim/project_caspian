@@ -1,11 +1,15 @@
 class ContactController < ApplicationController
 
+  before do
+    @current_user = Account.find session[:user_id]
+  end
+
   get '/' do
     erb :contact_form, locals: {title: 'Contact Information'}
   end
 
   post '/create' do
-  @contact_create = Contact.create({
+  @contact_create = @current_user.contacts.create({
     :phone          => params[:phone],
     :address        => params[:address],
     :city           => params[:city],
