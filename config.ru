@@ -12,6 +12,7 @@ require './models/account'
 require './models/camp_location'
 require './models/personal'
 require './models/medical'
+require './models/contact'
 
 map('/') {run ApplicationController}
 map('/account') {run AccountController}

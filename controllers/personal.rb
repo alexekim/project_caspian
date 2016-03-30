@@ -3,9 +3,8 @@ class PersonalController < ApplicationController
     @current_user = Account.find session[:user_id]
   end
 
-
   get '/' do
-      erb :personal_form, locals: {title: 'Personal Information'}
+    erb :personal_form, locals: {title: 'Personal Information'}
   end
 
   post '/create' do
@@ -18,8 +17,7 @@ class PersonalController < ApplicationController
       :blood_type => params[:blood_type]
     })
     # session[:personal] = params
-      @personal_create.save
-    redirect '/medical'
+    redirect '/contact'
   end
 
   get '/update' do
