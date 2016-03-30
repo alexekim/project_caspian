@@ -1,11 +1,15 @@
 class LocationController < ApplicationController
 
+  before do
+    @current_user = Account.find session[:user_id]
+  end
+
   get '/' do
     erb :camp_location_form, locals: {title: 'Camp & Vehicle Location'}
   end
 
   post '/create' do
-    @camp_create = CampLocation.create({
+    @camp_create = @current_user.camp_locations.create({
       :park_name     => params[:park_name],
       :site_number   => params[:site_number],
       :vehicle_make  => params[:vehicle_make],

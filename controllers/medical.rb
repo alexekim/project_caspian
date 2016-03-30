@@ -1,10 +1,15 @@
 class MedicalController < ApplicationController
+
+  before do
+    @current_user = Account.find session[:user_id]
+  end
+
   get '/' do
       erb :medical_form, locals: {title: 'Medical Information'}
   end
 
   post '/create' do
-    @medical_create = Medical.create({
+    @medical_create = @current_user.medicals.create({
       :allergies             => params[:allergies],
       :diseases              => params[:diseases],
       :medication_dosage     => params[:medication_dosage],

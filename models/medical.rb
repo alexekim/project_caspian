@@ -1,3 +1,3 @@
 class Medical < ActiveRecord::Base
-  belongs_to :accounts
+  belongs_to :account
 end
