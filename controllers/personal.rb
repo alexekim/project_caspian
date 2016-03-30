@@ -12,7 +12,8 @@ class PersonalController < ApplicationController
       :height     => params[:height],
       :weight     => params[:weight],
       :blood_type => params[:blood_type]
-      })
+    })
+    # session[:personal] = params
       @personal_create.save
     redirect '/medical'
   end

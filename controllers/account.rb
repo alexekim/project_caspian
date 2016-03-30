@@ -25,7 +25,8 @@ class AccountController < ApplicationController
   end
 
   post '/login' do
-    erb :profile
+    # redirect '/profile'
+    erb :profile, locals: {title: 'Profile'}
   end
 
 end
