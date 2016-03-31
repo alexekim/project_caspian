@@ -5,17 +5,17 @@ class AccountController < ApplicationController
   end
 
   post '/register' do
-    @is_user_duplicate = true
-    if (params[:password_hash] != params[:password_hash])
-      status 403
-    end
-
-    @all_users = Account.all
-    @all_users.each do |user|
-      if (user.email == params[:email])
-        status 403
-      end
-    end
+    # @is_user_duplicate = true
+    # if (params[:password_hash] != params[:password_hash])
+    #   status 403
+    # end
+    #
+    # @all_users = Account.all
+    # @all_users.each do |user|
+    #   if (user.email == params[:email])
+    #     status 403
+    #   end
+    # end
 
     password = BCrypt::Password.create(params[:password_hash])
     @account_create = Account.create({
@@ -34,12 +34,7 @@ class AccountController < ApplicationController
   end
 
   post '/login' do
-    # redirect '/profile'
-    # 2. Find user by email
     @account = Account.find_by(:email => params[:email])
-    puts @account.personal
-    # 3. Set user to @instance variable
-    # 4. Set session info
     if @account
       session[:logged_in] = true
       session[:user_id] = @account.id

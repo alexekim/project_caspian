@@ -50,9 +50,89 @@
   min-height: 100%;
 }
 
+#bg-medical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/medicals.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#bg-contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/contact.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#bg-personal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/personal.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#bg-location {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/camp_location.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#bg-profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/profile1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .caspian {
   font-family: 'Philosopher', sans-serif;
-  font-size: 72px;
+  font-size: 60px;
   color: white;
   position: absolute;
   top: 2%;
