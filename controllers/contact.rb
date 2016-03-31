@@ -10,10 +10,10 @@ class ContactController < ApplicationController
   post '/create' do
 
     # puts @current_user
-    puts'-----------'
-    puts session[:user_id]
-    puts '-----------'
-    @contact_create = @current_user.contacts.create({
+    # puts'-----------'
+    # puts session[:user_id]
+    # puts '-----------'
+    @contact_create = Contact.create({
       :phone          => params[:phone],
       :address        => params[:address],
       :city           => params[:city],
@@ -22,9 +22,9 @@ class ContactController < ApplicationController
       :country        => params[:country],
       :ice_name       => params[:ice_name],
       :ice_relation   => params[:ice_relation],
-      :ice_phone      => params[:ice_phone]
+      :ice_phone      => params[:ice_phone],
+      :account        => @current_user
     })
-
   redirect '/medical'
   end
 

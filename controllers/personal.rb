@@ -8,13 +8,14 @@ class PersonalController < ApplicationController
   end
 
   post '/create' do
-    @personal_create = @current_user.personals.create({
+    @personal_create = Personal.create({
       :name       => params[:name],
       :birthdate  => params[:birthdate],
       :gender     => params[:gender],
       :height     => params[:height],
       :weight     => params[:weight],
-      :blood_type => params[:blood_type]
+      :blood_type => params[:blood_type],
+      :account    => @current_user
     })
     redirect '/contact'
   end

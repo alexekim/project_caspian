@@ -9,14 +9,15 @@ class MedicalController < ApplicationController
   end
 
   post '/create' do
-    @medical_create = @current_user.medicals.create({
+    @medical_create = Medical.create({
       :allergies             => params[:allergies],
       :diseases              => params[:diseases],
       :medication_dosage     => params[:medication_dosage],
       :smoking               => params[:smoking],
       :alcohol               => params[:alcohol],
       :implants              => params[:implants],
-      :organ_donor           => params[:organ_donor]
+      :organ_donor           => params[:organ_donor],
+      :account               => @current_user
       })
     redirect '/camp_location'
   end

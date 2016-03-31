@@ -29,7 +29,7 @@ class AccountController < ApplicationController
       redirect '/personal'
     else
       "Something went wrong"
-    end
+  end
   end
 
   post '/login' do
