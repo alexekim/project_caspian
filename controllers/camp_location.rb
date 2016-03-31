@@ -2,6 +2,7 @@ class LocationController < ApplicationController
 
   before do
     @current_user = Account.find session[:user_id]
+
   end
 
   get '/' do

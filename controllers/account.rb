@@ -4,17 +4,17 @@ class AccountController < ApplicationController
   end
 
   post '/register' do
-    @is_user_duplicate = true
-    if (params[:password_hash] != params[:password_hash])
-      status 403
-    end
+    # @is_user_duplicate = true
+    # if (params[:password_hash] != params[:password_hash])
+    #   status 403
+    # end
 
-    @all_users = Account.all
-    @all_users.each do |user|
-      if (user.email == params[:email])
-        status 403
-      end
-    end
+    # @all_users = Account.all
+    # @all_users.each do |user|
+    #   if (user.email == params[:email])
+    #     status 403
+    #   end
+    # end
 
     password = BCrypt::Password.create(params[:password_hash])
     @account_create = Account.create({
