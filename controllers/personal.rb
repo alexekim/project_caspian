@@ -8,8 +8,6 @@ class PersonalController < ApplicationController
   end
 
   post '/create' do
-    # binding.pry
-    # puts @current_user
     @personal_create = Personal.create({
       :name       => params[:name],
       :birthdate  => params[:birthdate],

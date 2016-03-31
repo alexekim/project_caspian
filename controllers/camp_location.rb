@@ -9,16 +9,16 @@ class LocationController < ApplicationController
   end
 
   post '/create' do
-    @camp_create = @current_user.camp_locations.create({
+    @camp_create = CampLocation.create({
       :park_name     => params[:park_name],
       :site_number   => params[:site_number],
       :vehicle_make  => params[:vehicle_make],
       :vehicle_model => params[:vehicle_model],
       :vehicle_year  => params[:vehicle_year],
       :vehicle_color => params[:vehicle_color],
-      :vehicle_plate => params[:vehicle_plate]
+      :vehicle_plate => params[:vehicle_plate],
+      :account       => @current_user
       })
-      @camp_create.save
       redirect '/profile'
       # redirect '/personal/view'
     end
