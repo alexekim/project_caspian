@@ -30,7 +30,7 @@ class AccountController < ApplicationController
       redirect '/personal'
     else
       "Something went wrong"
-  end
+    end
   end
 
   post '/login' do
@@ -43,6 +43,11 @@ class AccountController < ApplicationController
       status 403
       "error, logging in."
     end
+  end
+
+  get '/logout' do
+    session[:logged_in] = nil
+    redirect '/'
   end
 
 end
