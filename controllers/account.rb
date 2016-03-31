@@ -48,4 +48,10 @@ class AccountController < ApplicationController
     end
   end
 
+  get '/logout' do
+    session[:logged_in] = nil
+    session[:user_id] = nil
+    redirect '/'
+  end
+
 end

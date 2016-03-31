@@ -9,10 +9,6 @@ class ContactController < ApplicationController
 
   post '/create' do
 
-    # puts @current_user
-    # puts'-----------'
-    # puts session[:user_id]
-    # puts '-----------'
     @contact_create = Contact.create({
       :phone          => params[:phone],
       :address        => params[:address],
