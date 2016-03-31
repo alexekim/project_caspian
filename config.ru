@@ -1,4 +1,7 @@
 require 'sinatra/base'
+require 'bundler'
+Bundler.require
+
 
 if ENV['DATABASE_URL']
   # production (on heroku or some other server)
