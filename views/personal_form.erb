@@ -27,6 +27,10 @@
         <label><p class="white">Blood Type</p>
         <input class="form-control" type="text" name="blood_type" placeholder="" ></label>
         <br />
+        <label><p class="white">Profile Pic</p>
+        <input class="form-control" type="file" onchange="readURL(this)"></label>
+        <input id="inputFileToLoad" type="hidden" name="image" value="">
+        <br />
         <input class="btn btn-success" type="submit" value="Next">
         </form>
       </div>

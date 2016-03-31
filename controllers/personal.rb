@@ -15,6 +15,7 @@ class PersonalController < ApplicationController
       :height     => params[:height],
       :weight     => params[:weight],
       :blood_type => params[:blood_type],
+      :image      => params[:image],
       :account    => @current_user
     })
     redirect '/contact'
