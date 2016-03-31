@@ -25,7 +25,7 @@ class PersonalController < ApplicationController
   end
 
   post '/update' do
-    erb :profile
+    redirect '/profile'
   end
 
 end
