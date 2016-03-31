@@ -16,7 +16,6 @@ class PersonalController < ApplicationController
       :weight     => params[:weight],
       :blood_type => params[:blood_type]
     })
-    # session[:personal] = params
     redirect '/contact'
   end
 
@@ -24,8 +23,4 @@ class PersonalController < ApplicationController
     erb :personal_update, locals: {title: 'Update Personal Information'}
   end
 
-  # get '/view'
-  #   @personal_all = Personal.all
-  #   erb :profile
-  # end
 end
