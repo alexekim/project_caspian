@@ -3,12 +3,6 @@ class ApplicationController < Sinatra::Base
   require 'bundler'
   Bundler.require
 
-  ActiveRecord::Base.establish_connection(
-    :adapter => 'postgresql',
-    :database => 'caspian'
-    )
-
-
   # enable session support for our application
   enable :sessions
 

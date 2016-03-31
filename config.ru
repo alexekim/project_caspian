@@ -1,5 +1,16 @@
 require 'sinatra/base'
 
+if ENV['DATABASE_URL']
+  # production (on heroku or some other server)
+  ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+else
+  # local development machine
+  ActiveRecord::Base.establish_connection(
+    :adapter => 'postgresql',
+    :database => 'caspian'
+  )
+end
+
 require './controllers/application'
 
 require './models/account'
