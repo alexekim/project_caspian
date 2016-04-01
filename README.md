@@ -32,7 +32,7 @@ This project must be a **full-stack** application.
   - Passwords are hashed using BCrypt.
 
 - **ActiveRecord** was used as the ORM with **PostgreSQL**.
-- Clean code was used, and was thus happy code.
+- Clean code was used. Thus, it was happy code.
 - [Available online here](caspian-app.herokuapp.com)
   - Side note: profile upload functionality is not live on the Heroku app.
 
@@ -56,7 +56,7 @@ Wireframe
 
 Design Assets
 --------
-We built a simple UI that is very clean for quick reading. We  selected Bootstrap to style our pages, along with custom CSS. Additionally, we used [Unsplash](unsplash.com) as a resource for royalty-free stock imagery.
+We built a simple UI that is very clean for quick reading. We  selected Bootstrap to style our pages, along with custom CSS. Additionally, we used [Unsplash](unsplash.com) as a resource for royalty-free stock imagery and [Google Fonts](https://www.google.com/fonts) for typefaces.
 
 Technologies Used
 ----------
@@ -84,7 +84,49 @@ function readURL(input){
 ```sql
  image BYTEA
  ```
+- **Using Relationships with Database Foreign Keys**
 
+```ruby
+class Medical < ActiveRecord::Base
+  belongs_to :account
+end
+```
+```ruby
+class Account < ActiveRecord::Base
+  has_one :personal
+  has_one :medical
+  has_one :contact
+  has_one :camp_location
+end
+```
+- **Custom CSS & Embedded Ruby**
+Implementing a full-width hi-res background image, so respond with perfect aspect ratio no matter what screen size.
+
+```css
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(/mountain_web_safe.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+```
+*CSS only* anti-alias styling for logo font to smooth out the edges of the letter vectors. Small feature, but makes a subtle difference improving the aesthetics.
+```css
+.antialias {
+  font-family: 'Philosopher', sans-serif;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  color: white;
+}
+```
 
 User Stories
 -------------
@@ -134,6 +176,7 @@ Pseudocode
 - Registration is very basic. Additional measures to confirm passwords and identity are not only ideal, they are necessary.
 - Regarding form fields, different types of inputs would be more appropriate for certain types of information, such as `select` and `option`.
 - UI has lots of room for improvement.
+- Although bootstrap covers responsiveness, we would have liked to add more custom CSS media queries such as changing font sizes based on screen size.
 
 
 
