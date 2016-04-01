@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     # session[:message] = 'global message test'
-    erb :index, locals: {title: 'Home Page Title Tag'}
+    erb :index, locals: {title: 'Caspian | Emergency Management'}
   end
 
   not_found do
