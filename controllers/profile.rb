@@ -3,7 +3,6 @@ class ProfileController < ApplicationController
     @current_user = Account.find session[:user_id]
   end
 
-
   get '/' do
 
       # p session[:personal]
