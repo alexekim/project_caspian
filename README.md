@@ -2,6 +2,7 @@
 # Project Two: Full-Stack Application:
 
 ## _Caspian, an emergency management app, for any trip._
+![Caspian](http://s23.postimg.org/r2kzjegy3/caspian.png)
 ----------------
 
 **Contributors:** Alex Kim, Maxwell Stern
